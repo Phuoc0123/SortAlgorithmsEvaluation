@@ -14,12 +14,12 @@ float rdReal() {
 float rdFloat(int l, int r) {
     if (l == r) return l;
     int val = rdInt(l, r - 1);
-    //return rdInt(l, r - 1) * 1.0 + rdReal();
     float res = val * 1.0 + rdReal();
     return res;
 }
 
 string NAME;
+float x[1000010];
 
 string ConvertIntToString(int num) {
     string ans = "";
@@ -34,17 +34,17 @@ string ConvertIntToString(int num) {
 int main() {
     srand(time(NULL));
     int n;
-    float val;
-    for (int i = 3; i <= 10; i++) {
-        NAME = "test" + ConvertIntToString(i) + ".inp";
+    for (int itest = 1; itest <= 10; itest++) {
+        NAME = "test" + ConvertIntToString(itest) + ".inp";
         ofstream inp(NAME);
-        n = rdInt(1000000, 1000000);
+        n = 1000000;
         inp << n << "\n";
-        val = 1000000;
-        for (int i = 1; i <= n; i++) {
-            val = rdFloat(-1000000, 1000000);
-            inp << setprecision(12) << val << " ";
-        }
+        for (int i = 1; i <= n; i++)
+            x[i] = rdFloat(-1000000, 1000000);
+        if (itest == 1) sort(x + 1, x + 1 + n);
+        if (itest == 2) sort(x + 1, x + 1 + n, greater<float>());
+        for (int i = 1; i <= n; i++)
+            inp << setprecision(12) << x[i] << " ";
         inp.close();
     }
 }
