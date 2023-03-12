@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1678457814 source:d:\baitap\it003\sortproject\sortalgorithmvaluation\main.cpp
+	<iostream>
+	<queue>
+	<time.h>
+	<algorithm>
+	"MyQuickSort.h"
+	"MyHeapSort.h"
+	"MyMergeSort.h"
+
+1678444807 d:\baitap\it003\sortproject\sortalgorithmvaluation\mymergesort.h
+
+1678447005 d:\baitap\it003\sortproject\sortalgorithmvaluation\myquicksort.h
+
+1678444797 d:\baitap\it003\sortproject\sortalgorithmvaluation\myheapsort.h
+
